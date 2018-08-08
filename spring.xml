@@ -2,6 +2,10 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
-    <bean id ="triangle" class="Triangle"/>
+    <bean id="triangle" class="Triangle">
+        <!--<property name="type" value="Equilateral"/> property tag uses setter type injection -->
+        <constructor-arg type="java.lang.String" index="0" value="Equilateral"/>
+        <constructor-arg type="int" index="1" value="20"/><!-- with constructor args it looks for a constructor that needs 2 parameters -->
+    </bean>
 
 </beans>
