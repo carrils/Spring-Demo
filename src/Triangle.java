@@ -1,39 +1,39 @@
 public class Triangle {
+    //triangles have 3 points so...
+    private Point PointA;
+    private Point PointB;
+    private Point PointC;
+    //without spring we would have to initialize these in the main or here
+    //if we do it here then the triangle would only have a single set of fixed points
 
-    private String type;
-    private int height;
-
-    public Triangle(String _type) {
-        //only takes type
-        this.type = _type;
-    }
-
-    public Triangle(int height) {
-        //only takes height
-        this.height = height;
-    }
-
-    public Triangle(String _type, int _height) {
-        //takes both type and height
-        this.type = _type;
-        this.height = _height;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    //commenter out to prove the constructor arg does not use setType
-    //constructor arg tag in spring.xml only uses getter methods
-    //public void setType(String type) {
-    //    this.type = type;
-    //}
 
     public void draw() {
-        System.out.println(getType() + " " + "Triangle Drawn" + " " + "of height: " + getHeight());
+        System.out.println("Point A: (" + getPointA().getX() + ", " + getPointA().getY() + ")");
+        System.out.println("Point B: (" + getPointB().getX() + ", " + getPointB().getY() + ")");
+        System.out.println("Point C: (" + getPointC().getX() + ", " + getPointC().getY() + ")");
+    }
+
+    public Point getPointA() {
+        return PointA;
+    }
+
+    public void setPointA(Point pointA) {
+        PointA = pointA;
+    }
+
+    public Point getPointB() {
+        return PointB;
+    }
+
+    public void setPointB(Point pointB) {
+        PointB = pointB;
+    }
+
+    public Point getPointC() {
+        return PointC;
+    }
+
+    public void setPointC(Point pointC) {
+        PointC = pointC;
     }
 }
